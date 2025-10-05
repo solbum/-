@@ -74,6 +74,8 @@ def GJInverse(matrix):
                 if A[j][i] != 0:
                     A[i], A[j] = A[j], A[i]
                     break
+            else :
+                raise ValueError("역행렬이 존재하지 않습니다.")
         
         pivot = A[i][i]
         A[i] = [x / pivot for x in A[i]]
